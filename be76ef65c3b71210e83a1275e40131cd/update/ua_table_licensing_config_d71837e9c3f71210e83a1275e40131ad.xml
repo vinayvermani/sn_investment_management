@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="INSERT_OR_UPDATE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_1153680_invest_0_account_holdings</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 20:29:12</sys_created_on>
+        <sys_id>d71837e9c3f71210e83a1275e40131ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1153680_invest_0_account_holdings</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>ua_table_licensing_config_d71837e9c3f71210e83a1275e40131ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 20:29:12</sys_updated_on>
+    </ua_table_licensing_config>
+</record_update>

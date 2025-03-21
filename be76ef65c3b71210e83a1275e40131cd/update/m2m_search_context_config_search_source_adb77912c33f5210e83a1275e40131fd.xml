@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_search_context_config_search_source">
+    <m2m_search_context_config_search_source action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <search_context_config display_value="Investments management - Workspace Search">b3a73912e13f5210a6c54b59ad5bba5b</search_context_config>
+        <source display_value="Investments management - x_1153680_invest_0_accoun">95b77912c33f5210e83a1275e40131e4</source>
+        <sys_class_name>m2m_search_context_config_search_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:39</sys_created_on>
+        <sys_id>adb77912c33f5210e83a1275e40131fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>m2m_search_context_config_search_source_adb77912c33f5210e83a1275e40131fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:39</sys_updated_on>
+    </m2m_search_context_config_search_source>
+</record_update>

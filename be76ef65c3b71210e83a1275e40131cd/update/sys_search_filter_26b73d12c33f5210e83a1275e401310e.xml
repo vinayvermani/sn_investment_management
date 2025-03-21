@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_filter">
+    <sys_search_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ais_search_source display_value="Client holdings">a6b7f912c33f5210e83a1275e40131ed</ais_search_source>
+        <label>Client holdings</label>
+        <name>Client holdings</name>
+        <order>500</order>
+        <search_context_config display_value="Investments management AI Search Configuration">3ba739122f3f521042a7142f2c59ba5b</search_context_config>
+        <sys_class_name>sys_search_filter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:43</sys_created_on>
+        <sys_id>26b73d12c33f5210e83a1275e401310e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Client holdings</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>sys_search_filter_26b73d12c33f5210e83a1275e401310e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:43</sys_updated_on>
+    </sys_search_filter>
+</record_update>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9e2133e1c3f71210e83a1275e401310c" label="Account Activity" max_length="40" name="x_1153680_invest_0_account_activity" text_index="true" type="collection">
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cash Deposit" sequence="0" value="cash_deposit"/>
+                <element inactive_on_update="false" label="Transfer" sequence="4" value="transfer"/>
+                <element inactive_on_update="false" label="Security Withdrawal" value="security_withdrawal"/>
+                <element inactive_on_update="false" label="Currency Conversion" value="currency_conversion"/>
+                <element inactive_on_update="false" label="Cash Withdrawal" sequence="1" value="cash_withdrawal"/>
+                <element inactive_on_update="false" label="Exchanged for Other Securities" sequence="5" value="exchange"/>
+                <element inactive_on_update="false" label="Security Deposit" value="security_deposit"/>
+                <element inactive_on_update="false" label="Bought Securities" value="bought_securities"/>
+                <element inactive_on_update="false" label="Sold Securities" value="sold_securities"/>
+                <element inactive_on_update="false" label="Buy" sequence="2" value="buy"/>
+                <element inactive_on_update="false" label="Crypto Withdrawal" sequence="7" value="crypto_withdrawal"/>
+                <element inactive_on_update="false" label="Sell" sequence="3" value="sell"/>
+                <element inactive_on_update="false" label="Crypto Deposit" sequence="6" value="crypto_deposit"/>
+            </choice>
+        </element>
+        <element label="Received Security" max_length="32" name="received_security" reference="x_1153680_invest_0_investment_securities" type="reference"/>
+        <element label="Fee Security" max_length="32" name="fee_security" reference="x_1153680_invest_0_investment_securities" type="reference"/>
+        <element label="Receiving Account" max_length="32" name="receiving_account" reference="x_1153680_invest_0_investment_account" type="reference"/>
+        <element label="Fee Quantity" max_length="40" name="fee_quantity" type="string"/>
+        <element label="Sent Security" max_length="32" name="sent_security" reference="x_1153680_invest_0_investment_securities" type="reference"/>
+        <element label="Fee Value CAD" max_length="40" name="fee_value_cad" type="float"/>
+        <element label="Fx Rate" max_length="40" name="fx_rate" type="float"/>
+        <element label="Fee Cost CAD" max_length="40" name="fee_cost_cad" type="float"/>
+        <element label="Sent Quantity" max_length="40" name="sent_quantity" type="string"/>
+        <element label="Date" max_length="40" name="date" type="glide_date_time"/>
+        <element label="Received Cost CAD" max_length="40" name="received_cost_cad" type="float"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Sent Cost CAD" max_length="40" name="sent_cost_cad" type="float"/>
+        <element label="Fee Account" max_length="32" name="fee_account" reference="x_1153680_invest_0_investment_account" type="reference"/>
+        <element label="Sending Account" max_length="32" name="sending_account" reference="x_1153680_invest_0_investment_account" type="reference"/>
+        <element label="Received Quantity" max_length="40" name="received_quantity" type="string"/>
+        <element label="Value CAD" max_length="40" name="value_cad" type="float"/>
+        <index name="index">
+            <element name="fee_account"/>
+        </index>
+        <index name="index2">
+            <element name="fee_security"/>
+        </index>
+        <index name="index3">
+            <element name="receiving_account"/>
+        </index>
+        <index name="index4">
+            <element name="sending_account"/>
+        </index>
+        <index name="index5">
+            <element name="sent_security"/>
+        </index>
+    </element>
+</database>

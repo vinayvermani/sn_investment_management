@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="082826a6c3b3d210e83a1275e4013132" label="Gains" max_length="40" name="x_1153680_invest_0_gains" type="collection">
+        <element label="Quantity" max_length="40" name="quantity" type="float"/>
+        <element label="Gains CAD" max_length="40" name="gains_cad" type="float"/>
+        <element label="Activity" max_length="32" name="activity" reference="x_1153680_invest_0_account_activity" type="reference"/>
+        <element label="Cost Base CAD" max_length="40" name="cost_base_cad" type="float"/>
+        <element label="Note" max_length="100" name="note" type="string"/>
+        <element label="Proceeds CAD" max_length="40" name="proceeds_cad" type="float"/>
+        <element label="Holding" max_length="32" name="holding" reference="x_1153680_invest_0_account_holdings" type="reference"/>
+        <index name="index">
+            <element name="activity"/>
+        </index>
+        <index name="index2">
+            <element name="holding"/>
+        </index>
+    </element>
+</database>

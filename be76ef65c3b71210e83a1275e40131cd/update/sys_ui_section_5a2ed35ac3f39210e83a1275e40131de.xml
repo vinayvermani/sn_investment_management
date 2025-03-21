@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="5a2ed35ac3f39210e83a1275e40131de" sys_domain="global" table="x_1153680_invest_0_cost_base_change" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>d304f4edc394a210e83a1275e401313a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>note</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>5704f4edc394a210e83a1275e401313b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>db04f4edc394a210e83a1275e401313b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>client</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>5304f4edc394a210e83a1275e401313c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cost_base_change</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>d704f4edc394a210e83a1275e401313c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>new_value</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>5f04f4edc394a210e83a1275e401313c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>d304f4edc394a210e83a1275e401313d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>holding</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>5b04f4edc394a210e83a1275e401313d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>previous_value</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>df04f4edc394a210e83a1275e401313d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-15 02:43:59</sys_created_on>
+            <sys_id>5704f4edc394a210e83a1275e401313e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_cost_base_change" sys_domain="global" view="Default view">5a2ed35ac3f39210e83a1275e40131de</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-15 02:43:59</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_1153680_invest_0_cost_base_change</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-21 02:31:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5a2ed35ac3f39210e83a1275e40131de</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1153680_invest_0_cost_base_change</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+            <sys_update_name>sys_ui_section_5a2ed35ac3f39210e83a1275e40131de</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-21 02:31:16</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

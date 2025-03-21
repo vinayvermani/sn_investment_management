@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config">
+    <sys_ux_app_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <custom_icon/>
+        <default_route_type/>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <encode_query_string>false</encode_query_string>
+        <icon/>
+        <landing_path>home</landing_path>
+        <name>Investments management App Config</name>
+        <prefetch_limits/>
+        <sys_class_name>sys_ux_app_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:33</sys_created_on>
+        <sys_id>bfa73912043f521063165ab264418e61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Investments management App Config</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>sys_ux_app_config_bfa73912043f521063165ab264418e61</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:33</sys_updated_on>
+    </sys_ux_app_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=bfa73912043f521063165ab264418e61"/>
+</record_update>

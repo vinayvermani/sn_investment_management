@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access/>
+        <actions_access>true</actions_access>
+        <alter_access>true</alter_access>
+        <caller_access/>
+        <client_scripts_access>true</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>true</create_access>
+        <create_access_controls>false</create_access_controls>
+        <delete_access>false</delete_access>
+        <is_extendable>false</is_extendable>
+        <label>Activity Ledger</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_1153680_invest_0_activity_ledger</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 20:52:38</sys_created_on>
+        <sys_id>2a7d3f61c33b1210e83a1275e4013173</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Invest 0 Activity Ledger</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>sys_db_object_2a7d3f61c33b1210e83a1275e4013173</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 20:52:38</sys_updated_on>
+        <update_access>true</update_access>
+        <user_role/>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</application>
+        <file_path/>
+        <instance_id>3965b71cdb3af55002d917291396198b</instance_id>
+        <instance_name>dev224621</instance_name>
+        <name>sys_db_object_2a7d3f61c33b1210e83a1275e4013173</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access/><actions_access>true</actions_access><alter_access>true</alter_access><caller_access/><client_scripts_access>true</client_scripts_access><configuration_access>false</configuration_access><create_access>true</create_access><create_access_controls>false</create_access_controls><delete_access>false</delete_access><is_extendable>false</is_extendable><label>Activity Ledger</label><live_feed_enabled>false</live_feed_enabled><name>x_1153680_invest_0_activity_ledger</name><number_ref/><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class/><sys_class_name>sys_db_object</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-18 20:52:38</sys_created_on><sys_id>2a7d3f61c33b1210e83a1275e4013173</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Invest 0 Activity Ledger</sys_name><sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package><sys_policy/><sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope><sys_update_name>sys_db_object_2a7d3f61c33b1210e83a1275e4013173</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-18 20:52:38</sys_updated_on><update_access>true</update_access><user_role/><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
+        <payload_hash>-1646966075</payload_hash>
+        <record_name>Activity Ledger</record_name>
+        <reverted_from/>
+        <source>3e76ef65c3b71210e83a1275e40131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 20:52:39</sys_created_on>
+        <sys_id>fe7d3f61c33b1210e83a1275e401318b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1951ad593110000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 20:52:39</sys_updated_on>
+        <type>Table</type>
+        <update_guid>367d3f61853b1210c6f245ba8fd6c18b</update_guid>
+        <update_guid_history>367d3f61853b1210c6f245ba8fd6c18b:-1646966075</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-21 02:28:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>5228087c0cfc48449bcc0ffd520c5f44</sys_id>
+        <sys_metadata>2a7d3f61c33b1210e83a1275e4013173</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Invest 0 Activity Ledger</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_scope_delete display_value="">0579e6628a8849e9808480e1020dcfd1</sys_scope_delete>
+        <sys_update_name>sys_db_object_2a7d3f61c33b1210e83a1275e4013173</sys_update_name>
+        <sys_update_version display_value="sys_db_object_2a7d3f61c33b1210e83a1275e4013173">fe7d3f61c33b1210e83a1275e401318b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-21 02:28:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

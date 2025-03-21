@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="8b7df7e9c3f71210e83a1275e4013146" sys_domain="global" table="x_1153680_invest_0_activity_ledger" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>flow</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>968e3bb9c3331210e83a1275e4013137</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>amount</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>528e3bb9c3331210e83a1275e4013138</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cost_cad</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>d68e3bb9c3331210e83a1275e4013138</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity_id</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>5e8e3bb9c3331210e83a1275e4013138</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notes</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>d28e3bb9c3331210e83a1275e4013139</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>5a8e3bb9c3331210e83a1275e4013139</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>balance_amount</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>de8e3bb9c3331210e83a1275e4013139</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>security</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>568e3bb9c3331210e83a1275e401313a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>account</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>da8e3bb9c3331210e83a1275e401313a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>value_cad</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+            <sys_id>528e3bb9c3331210e83a1275e401313b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_1153680_invest_0_activity_ledger</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-18 20:52:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8b7df7e9c3f71210e83a1275e4013146</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1153680_invest_0_activity_ledger</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+            <sys_update_name>sys_ui_section_8b7df7e9c3f71210e83a1275e4013146</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-18 20:52:40</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</application>
+        <file_path/>
+        <instance_id>3965b71cdb3af55002d917291396198b</instance_id>
+        <instance_name>dev224621</instance_name>
+        <name>sys_ui_section_8b7df7e9c3f71210e83a1275e4013146</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="8b7df7e9c3f71210e83a1275e4013146" sys_domain="global" table="x_1153680_invest_0_activity_ledger" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>flow</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>968e3bb9c3331210e83a1275e4013137</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>amount</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>528e3bb9c3331210e83a1275e4013138</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>cost_cad</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>d68e3bb9c3331210e83a1275e4013138</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>activity_id</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>5e8e3bb9c3331210e83a1275e4013138</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>notes</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>d28e3bb9c3331210e83a1275e4013139</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>5a8e3bb9c3331210e83a1275e4013139</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>balance_amount</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>de8e3bb9c3331210e83a1275e4013139</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>security</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>568e3bb9c3331210e83a1275e401313a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>account</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>da8e3bb9c3331210e83a1275e401313a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>value_cad</element><position>9</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-19 15:35:45</sys_created_on><sys_id>528e3bb9c3331210e83a1275e401313b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_activity_ledger" sys_domain="global" view="Default view">8b7df7e9c3f71210e83a1275e4013146</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-19 15:35:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_1153680_invest_0_activity_ledger</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-18 20:52:40</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8b7df7e9c3f71210e83a1275e4013146</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1153680_invest_0_activity_ledger</sys_name><sys_overrides/><sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package><sys_policy/><sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope><sys_update_name>sys_ui_section_8b7df7e9c3f71210e83a1275e4013146</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-18 20:52:40</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>647332166</payload_hash>
+        <record_name>Activity Ledger</record_name>
+        <reverted_from/>
+        <source>3e76ef65c3b71210e83a1275e40131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-19 15:35:45</sys_created_on>
+        <sys_id>2e8e3bb9c3331210e83a1275e401313d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1951ed9cfda0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-19 15:35:45</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>a28e3bb95b3312101c6f9873a7e7833d</update_guid>
+        <update_guid_history>a28e3bb95b3312101c6f9873a7e7833d:647332166,ec988cfd3b3b1210fb7883bbb7bf86b3:-29262535,077d3f610e3b1210ad229973cb6144e0:-637572627</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-21 02:28:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>01e689f157774f1680bedc97a09dd979</sys_id>
+        <sys_metadata>8b7df7e9c3f71210e83a1275e4013146</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1153680_invest_0_activity_ledger</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_parent display_value="">2a7d3f61c33b1210e83a1275e4013173</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_scope_delete display_value="">0579e6628a8849e9808480e1020dcfd1</sys_scope_delete>
+        <sys_update_name>sys_ui_section_8b7df7e9c3f71210e83a1275e4013146</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_8b7df7e9c3f71210e83a1275e4013146">2e8e3bb9c3331210e83a1275e401313d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-21 02:28:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

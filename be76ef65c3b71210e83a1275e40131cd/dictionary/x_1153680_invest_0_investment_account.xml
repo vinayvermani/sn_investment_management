@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b8082329c3b71210e83a1275e4013159" label="Investment Account" max_length="40" name="x_1153680_invest_0_investment_account" text_index="true" type="collection">
+        <element display="true" label="Account Name" max_length="40" name="account_name" type="string"/>
+        <element label="Account Details" max_length="250" name="account_details" type="string"/>
+        <element label="Client" max_length="32" name="client" reference="x_1153680_invest_0_client" type="reference"/>
+        <element label="Taxable" max_length="40" name="taxable" type="boolean"/>
+        <element choice="3" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="RRSP" sequence="1" value="rrsp"/>
+                <element inactive_on_update="false" label="Taxable" sequence="2" value="taxable"/>
+                <element inactive_on_update="false" label="TFSA" sequence="0" value="tfsa"/>
+                <element inactive_on_update="false" label="RESP" sequence="3" value="resp"/>
+                <element inactive_on_update="false" label="RDSP" sequence="4" value="rdsp"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="client"/>
+        </index>
+    </element>
+</database>

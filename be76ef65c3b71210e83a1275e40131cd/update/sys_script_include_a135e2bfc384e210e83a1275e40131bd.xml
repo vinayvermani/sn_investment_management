@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1153680_invest_0.IMTestUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>IMTestUtil</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var IMTestUtil = Class.create();
+IMTestUtil.prototype = {
+    initialize: function() {},
+    clearTables: function() {
+        var scope = "x_1153680_invest_0_";
+
+        var deleteRecordTables = [
+            "account_activity",
+            "client_holdings",
+            "account_holdings",
+            "gains",
+            "holding_quantity_change",
+            "cost_base_change"
+        ];
+
+        var self = this;
+        deleteRecordTables.forEach(function(table) {
+            self.deleteTableRecords(scope + table);
+        });
+
+
+
+
+    },
+
+    startTesting: function() {
+        var scope = "x_1153680_invest_0_";
+        var self = this;
+
+
+
+        var testCaseGr = new GlideRecord(scope + "test_case");
+        testCaseGr.orderBy("order");
+        testCaseGr.query();
+        if (testCaseGr.next()) {
+            //Create Client Holdings & account holdings
+            var resultFields = ["result_account_holdings", "result_client_holdings", "result_gains"];
+            resultFields.forEach(function(field) {
+                testCaseGr.setValue(field, "");
+            });
+            testCaseGr.update();
+            ["client_holdings", "account_holdings", "investment_securities"].forEach(function(tableFieldName) {
+                //gs.info(tableFieldName);
+                //gs.info(JSON.stringify(self.tabSeparatedStringToJson(testCaseGr[tableFieldName] + "")));
+
+                if (testCaseGr[tableFieldName]) {
+                    self.createGlideRecordFromJsonArray(
+                        scope + tableFieldName,
+                        self.tabSeparatedStringToJson(testCaseGr[tableFieldName] + "")
+                    );
+                }
+            });
+            //Account Activity Records
+            if (testCaseGr["activities"]) {
+                self.createGlideRecordFromJsonArray(
+                    scope + "account_activity",
+                    self.tabSeparatedStringToJson(testCaseGr.activities + "")
+                );
+            }
+
+
+
+
+        }
+
+        new x_1153680_invest_0.IMActivityUtil().processActivities();
+
+        testCaseGr.result_client_holdings = self.getTableDataAsTabSeparatedString(scope + "client_holdings", ["client", "security", "cost_base_cad"]);
+        testCaseGr.result_account_holdings = self.getTableDataAsTabSeparatedString(scope + "account_holdings", ["account", "security", "quantity"]);
+        testCaseGr.result_gains = self.getTableDataAsTabSeparatedString(scope + "gains", ["activity", "holding", "quantity", "cost_base_cad", "proceeds_cad", "gains_cad", "note"]);
+
+        testCaseGr.update();
+    },
+    getTableDataAsTabSeparatedString: function(tableName, fieldNames) {
+        try {
+            var gr = new GlideRecord(tableName);
+            if (!gr.isValid()) {
+                throw "Table '" + tableName + "' does not exist.";
+            }
+
+            gr.query();
+
+            var headerRow = fieldNames.join('\t'); // Create header row
+            var dataRows = [];
+
+            while (gr.next()) {
+                var rowValues = [];
+                for (var i = 0; i < fieldNames.length; i++) {
+                    var fieldName = fieldNames[i];
+                    if (gr.isValidField(fieldName)) {
+                        rowValues.push(gr.getDisplayValue(fieldName));
+                    } else {
+                        rowValues.push(""); // Add empty string if field doesn't exist.
+                    }
+
+                }
+                dataRows.push(rowValues.join('\t'));
+            }
+
+            return headerRow + '\n' + dataRows.join('\n'); // Combine header and data rows
+
+        } catch (ex) {
+            gs.error("Error getting table data: " + ex);
+            return "Error: " + ex;
+        }
+    },
+
+
+    getReferenceTableFromDictionary: function(tableName, fieldName) {
+        try {
+            var gr = new GlideRecord('sys_dictionary');
+
+            gr.addQuery('name', tableName);
+            gr.addQuery('element', fieldName);
+            gr.query();
+
+            if (gr.next() && gr.internal_type == "reference") {
+
+                return gr.reference + ""; // Ensure it's returned as a string
+            }
+
+            return null; // Return null if not a reference or not found
+
+        } catch (ex) {
+            gs.error("Error getting reference table from dictionary: " + ex);
+            return null; // Return null on error
+        }
+    },
+
+    tabSeparatedStringToJson: function(tabSeparatedString, delimiter) {
+        try {
+            if (!tabSeparatedString) {
+                return {}; // Return empty JSON object if input is empty
+            }
+
+            var separator = delimiter || '\t'; // Use provided delimiter or tab by default
+            var lines = tabSeparatedString.split('\n');
+            if (lines.length < 2) {
+                return {}; // Return empty JSON if there aren't at least 2 lines (header and data)
+            }
+
+            var headers = lines[0].split(separator);
+            var jsonArray = [];
+
+            for (var i = 1; i < lines.length; i++) {
+
+                var values = lines[i].split(separator);
+                var jsonObject = {};
+
+                if (values.length !== headers.length) {
+                    gs.warn("Line " + (i + 1) + " has a different number of values than headers. Skipping.");
+                    continue; // Skip lines with mismatched value counts
+                }
+
+                for (var j = 0; j < headers.length; j++) {
+                    jsonObject[headers[j].trim()] = values[j].trim(); // Trim whitespace
+                }
+
+                jsonArray.push(jsonObject);
+            }
+
+            return jsonArray;
+
+        } catch (ex) {
+            throw new Error("Error converting tab-separated string to JSON: " + ex);
+            gs.error("Error converting tab-separated string to JSON: " + ex);
+            return {}; // Return empty JSON object on error
+        }
+    },
+
+    getDisplayField: function(tableName) {
+        var gr = new GlideRecord('sys_dictionary');
+        gr.addQuery('name', tableName);
+        gr.addQuery('display', true);
+        gr.query();
+        if (gr.next()) {
+            return gr.element + ""; // Return the element name
+        }
+        return null; // Return null if no display field is found
+    },
+    createGlideRecordFromJsonArray: function(tableName, jsonDataArray) {
+        try {
+            if (!Array.isArray(jsonDataArray)) {
+                throw new Error("jsonDataArray must be an array.");
+            }
+
+            var createdSysIds = []; // Array to store sys_ids of created records
+
+            for (var i = 0; i < jsonDataArray.length; i++) {
+                var jsonData = jsonDataArray[i];
+                var gr = new GlideRecord(tableName);
+
+                if (!gr.isValid()) {
+                    throw new Error("Table '" + tableName + "' does not exist.");
+                }
+
+                for (var fieldName in jsonData) {
+                    if (jsonData.hasOwnProperty(fieldName) && jsonData[fieldName]) {
+                        if (!gr.isValidField(fieldName)) {
+                            throw new Error("Field '" + fieldName + "' does not exist in table '" + tableName + "'.");
+                        }
+
+                        var referenceTable = this.getReferenceTableFromDictionary(tableName, fieldName);
+
+                        if (referenceTable) { // It's a reference field
+                            var referenceDisplayValue = jsonData[fieldName];
+                            var referenceSysId = this.getSysIdFromDisplayValue(referenceTable, referenceDisplayValue);
+
+                            if (referenceSysId) {
+                                gr[fieldName] = referenceSysId;
+                            } else {
+                                throw new Error("Reference value '" + referenceDisplayValue + "' not found in table '" + referenceTable + "' for field '" + fieldName + "'.");
+                            }
+                        } else {
+                            gr[fieldName] = jsonData[fieldName];
+                        }
+                    }
+                }
+
+                var sysId = gr.insert();
+                createdSysIds.push(sysId);
+            }
+
+            return createdSysIds; // Return array of sys_ids
+
+        } catch (ex) {
+            throw new Error("Error creating GlideRecords: " + ex);
+        }
+    },
+
+    createGlideRecordFromJson: function(tableName, jsonData) {
+        try {
+            var gr = new GlideRecord(tableName);
+            if (!gr.isValid()) {
+                throw "Table '" + tableName + "' does not exist.";
+            }
+
+            for (var fieldName in jsonData) {
+                if (jsonData.hasOwnProperty(fieldName)) {
+                    if (!gr.isValidField(fieldName)) {
+                        throw new Error("Field '" + fieldName + "' does not exist in table '" + tableName + "'.");
+                    }
+
+                    var referenceTable = this.checkReferenceField(tableName, fieldName);
+
+                    if (referenceTable) { // It's a reference field
+                        var referenceDisplayValue = jsonData[fieldName];
+                        var referenceSysId = this.getSysIdFromDisplayValue(referenceTable, referenceDisplayValue);
+
+                        if (referenceSysId) {
+                            gr[fieldName] = referenceSysId;
+                        } else {
+                            throw new Error("Reference value '" + referenceDisplayValue + "' not found in table '" + referenceTable + "' for field '" + fieldName + "'.");
+                        }
+                    } else {
+                        gr[fieldName] = jsonData[fieldName];
+                    }
+                }
+            }
+
+            var sysId = gr.insert();
+            return sysId;
+
+        } catch (ex) {
+            throw new Error("Error creating GlideRecord: " + ex);
+        }
+    },
+    getSysIdFromDisplayValue: function(tableName, displayValue) {
+        try {
+            var displayField = this.getDisplayField(tableName);
+
+            if (!displayField) {
+                throw new Error("Could not find display field for table '" + tableName + "'.");
+            }
+
+            var gr = new GlideRecord(tableName);
+            gr.addQuery(displayField, displayValue);
+            gr.query();
+
+            if (gr.next()) {
+                return gr.sys_id + ""; // Return sys_id as string
+            } else {
+                return null; // Return null if no matching record is found
+            }
+
+        } catch (ex) {
+            gs.error("Error finding sys_id: " + ex);
+            return null; // Return null on error
+        }
+    },
+    deleteTableRecords: function(tableName, encodedQuery) {
+        try {
+            var gr = new GlideRecord(tableName);
+            if (!gr.isValid()) {
+                throw "Table '" + tableName + "' does not exist.";
+            }
+
+            if (encodedQuery) {
+                gr.addEncodedQuery(encodedQuery);
+            }
+            gr.deleteMultiple();
+            return;
+            gr.query();
+
+            var count = 0;
+            while (gr.next()) {
+                gr.deleteRecord();
+                count++;
+            }
+
+            return "Deleted " + count + " records from table '" + tableName + "'.";
+
+        } catch (ex) {
+            gs.error("Error deleting records: " + ex);
+            return "Error: " + ex;
+        }
+    },
+
+
+    type: 'IMTestUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-10 00:34:45</sys_created_on>
+        <sys_id>a135e2bfc384e210e83a1275e40131bd</sys_id>
+        <sys_mod_count>65</sys_mod_count>
+        <sys_name>IMTestUtil</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>sys_script_include_a135e2bfc384e210e83a1275e40131bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-11 01:16:19</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a135e2bfc384e210e83a1275e40131bd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-10 00:34:45</sys_created_on>
+        <sys_id>59862effc384e210e83a1275e40131eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-10 00:34:45</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

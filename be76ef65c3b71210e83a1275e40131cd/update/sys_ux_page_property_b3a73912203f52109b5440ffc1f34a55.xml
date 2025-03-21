@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Tabs Configuration</description>
+        <name>chrome_tab</name>
+        <page display_value="Investments management">fba73912f53f5210423c19c89eec6c62</page>
+        <required_translations>[ {
+  "message" : "New Account Activity",
+  "comment" : ""
+}, {
+  "message" : "New Account Holdings",
+  "comment" : ""
+}, {
+  "message" : "New Activity Ledger",
+  "comment" : ""
+}, {
+  "message" : "New Client",
+  "comment" : ""
+}, {
+  "message" : "New Client holdings",
+  "comment" : ""
+}, {
+  "message" : "New Investment Account",
+  "comment" : ""
+}, {
+  "message" : "New Investment Securities",
+  "comment" : ""
+} ]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>b3a73912203f52109b5440ffc1f34a55</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>chrome_tab</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>sys_ux_page_property_b3a73912203f52109b5440ffc1f34a55</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:40</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_1153680_invest_0.fba73912f53f5210423c19c89eec6c62.root.global.chrome_tab</unique_name>
+        <value>{"contextual":["record"],"newTabMenu":[{"label":{"translatable":true,"message":"New Account Activity"},"routeInfo":{"route":"record","fields":{"table":"x_1153680_invest_0_account_activity","sysId":"-1"},"multiInstField":"sysId"},"condition":{"tableDescription":{"table":"x_1153680_invest_0_account_activity","canCreate":true}}},{"label":{"translatable":true,"message":"New Account Holdings"},"routeInfo":{"route":"record","fields":{"table":"x_1153680_invest_0_account_holdings","sysId":"-1"},"multiInstField":"sysId"},"condition":{"tableDescription":{"table":"x_1153680_invest_0_account_holdings","canCreate":true}}},{"label":{"translatable":true,"message":"New Activity Ledger"},"routeInfo":{"route":"record","fields":{"table":"x_1153680_invest_0_activity_ledger","sysId":"-1"},"multiInstField":"sysId"},"condition":{"tableDescription":{"table":"x_1153680_invest_0_activity_ledger","canCreate":true}}},{"label":{"translatable":true,"message":"New Client"},"routeInfo":{"route":"record","fields":{"table":"x_1153680_invest_0_client","sysId":"-1"},"multiInstField":"sysId"},"condition":{"tableDescription":{"table":"x_1153680_invest_0_client","canCreate":true}}},{"label":{"translatable":true,"message":"New Client holdings"},"routeInfo":{"route":"record","fields":{"table":"x_1153680_invest_0_client_holdings","sysId":"-1"},"multiInstField":"sysId"},"condition":{"tableDescription":{"table":"x_1153680_invest_0_client_holdings","canCreate":true}}},{"label":{"translatable":true,"message":"New Investment Account"},"routeInfo":{"route":"record","fields":{"table":"x_1153680_invest_0_investment_account","sysId":"-1"},"multiInstField":"sysId"},"condition":{"tableDescription":{"table":"x_1153680_invest_0_investment_account","canCreate":true}}},{"label":{"translatable":true,"message":"New Investment Securities"},"routeInfo":{"route":"record","fields":{"table":"x_1153680_invest_0_investment_securities","sysId":"-1"},"multiInstField":"sysId"},"condition":{"tableDescription":{"table":"x_1153680_invest_0_investment_securities","canCreate":true}}}],"maxMainTabLimit":10,"maxTotalSubTabLimit":30}</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=b3a73912203f52109b5440ffc1f34a55"/>
+</record_update>
