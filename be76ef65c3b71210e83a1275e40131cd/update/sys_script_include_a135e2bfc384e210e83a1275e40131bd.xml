@@ -21,7 +21,9 @@ IMTestUtil.prototype = {
             "account_holdings",
             "gains",
             "holding_quantity_change",
-            "cost_base_change"
+            "cost_base_change",
+			"investment_account",
+			"investment_securities"
         ];
 
         var self = this;
@@ -32,6 +34,54 @@ IMTestUtil.prototype = {
 
 
 
+    },
+    ensureClientExists: function(clientName) {
+        var gr = new GlideRecord("x_1153680_invest_0_client");
+        gr.addQuery("name", clientName);
+        gr.query();
+
+        if (gr.next()) {
+            return gr.sys_id + "";
+        }
+
+        gr.initialize();
+        gr.name = clientName;
+        gr.id = "TESTCLIENT01";
+        return gr.insert() + "";
+    },
+
+    ensureAccountExists: function(accountName, clientSysId) {
+        var gr = new GlideRecord("x_1153680_invest_0_investment_account");
+        gr.addQuery("account_name", accountName);
+        gr.addQuery("client", clientSysId);
+        gr.query();
+
+        if (gr.next()) {
+            return gr.sys_id + "";
+        }
+
+        gr.initialize();
+        gr.account_name = accountName;
+        gr.client = clientSysId;
+        return gr.insert() + "";
+    },
+
+    extractUniqueAccountNames: function(testCaseGr) {
+        var accounts = {};
+
+        if (!testCaseGr.client_holdings) {
+            return [];
+        }
+
+        var rows = this.tabSeparatedStringToJson(testCaseGr.account_holdings + "");
+
+        rows.forEach(function(row) {
+            if (row.account) {
+                accounts[row.account] = true;
+            }
+        });
+
+        return Object.keys(accounts);
     },
 
     startTesting: function() {
@@ -44,13 +94,26 @@ IMTestUtil.prototype = {
         testCaseGr.orderBy("order");
         testCaseGr.query();
         if (testCaseGr.next()) {
+
+            // Create / ensure Client
+            var clientName = testCaseGr.client ? testCaseGr.client + "" : "TestClient";
+            var clientSysId = this.ensureClientExists(clientName);
+
+            // Create / ensure Accounts (derived from account_holdings)
+            var accountNames = this.extractUniqueAccountNames(testCaseGr);
+		
+            accountNames.forEach(function(accountName) {
+				gs.info("AccountName: "+accountName);
+                self.ensureAccountExists(accountName, clientSysId);
+            });
+
             //Create Client Holdings & account holdings
             var resultFields = ["result_account_holdings", "result_client_holdings", "result_gains"];
             resultFields.forEach(function(field) {
                 testCaseGr.setValue(field, "");
             });
             testCaseGr.update();
-            ["client_holdings", "account_holdings", "investment_securities"].forEach(function(tableFieldName) {
+            ["investment_securities","client_holdings","account_holdings"].forEach(function(tableFieldName) {
                 //gs.info(tableFieldName);
                 //gs.info(JSON.stringify(self.tabSeparatedStringToJson(testCaseGr[tableFieldName] + "")));
 
@@ -334,14 +397,14 @@ IMTestUtil.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-03-10 00:34:45</sys_created_on>
         <sys_id>a135e2bfc384e210e83a1275e40131bd</sys_id>
-        <sys_mod_count>65</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name>IMTestUtil</sys_name>
         <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
         <sys_update_name>sys_script_include_a135e2bfc384e210e83a1275e40131bd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-03-11 01:16:19</sys_updated_on>
+        <sys_updated_on>2026-01-05 18:22:50</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>a135e2bfc384e210e83a1275e40131bd</id>

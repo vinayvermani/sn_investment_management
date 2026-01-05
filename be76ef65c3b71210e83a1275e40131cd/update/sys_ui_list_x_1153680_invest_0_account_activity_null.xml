@@ -2,168 +2,273 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_1153680_invest_0_account_activity" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>account</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>number</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>a326cc3dc33b1210e83a1275e401313d</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>11dab085935efe1052697d532bba10a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>type</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>date</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>ab26cc3dc33b1210e83a1275e401313d</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>95dab085935efe1052697d532bba10a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>sending_security</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>type</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>af26cc3dc33b1210e83a1275e401313d</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>1ddab085935efe1052697d532bba10a9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>sending_quantity</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>value_cad</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>a326cc3dc33b1210e83a1275e401313e</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>91dab085935efe1052697d532bba10aa</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>receiving_security</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>fx_rate</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>a726cc3dc33b1210e83a1275e401313e</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>19dab085935efe1052697d532bba10aa</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>receiving_quantity</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>sending_account</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>ab26cc3dc33b1210e83a1275e401313e</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>9ddab085935efe1052697d532bba10aa</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>fee_security</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>sent_security</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>af26cc3dc33b1210e83a1275e401313e</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>15dab085935efe1052697d532bba10ab</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>fee_quantity</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>sent_quantity</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>a326cc3dc33b1210e83a1275e401313f</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>99dab085935efe1052697d532bba10ab</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>fx_rate</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>sent_cost_cad</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>a726cc3dc33b1210e83a1275e401313f</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>11dab085935efe1052697d532bba10ac</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>net_value_cad</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>receiving_account</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>9</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>ab26cc3dc33b1210e83a1275e401313f</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>95dab085935efe1052697d532bba10ac</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>fee_value_cad</element>
-            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6326cc3dc33b1210e83a1275e401313c</list_id>
+            <element>received_security</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>10</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
-            <sys_id>af26cc3dc33b1210e83a1275e401313f</sys_id>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>1ddab085935efe1052697d532bba10ac</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>received_quantity</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>11</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>91dab085935efe1052697d532bba10ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>received_cost_cad</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>12</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>19dab085935efe1052697d532bba10ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>fee_account</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>13</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>9ddab085935efe1052697d532bba10ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>fee_security</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>14</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>15dab085935efe1052697d532bba10ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>fee_quantity</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>15</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>99dab085935efe1052697d532bba10ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>fee_value_cad</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>16</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>11dab085935efe1052697d532bba10af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>fee_cost_cad</element>
+            <list_id display_value="x_1153680_invest_0_account_activity" element="NULL" name="x_1153680_invest_0_account_activity" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51dab085935efe1052697d532bba10a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>17</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
+            <sys_id>95dab085935efe1052697d532bba10af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -177,10 +282,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-02-18 21:30:40</sys_created_on>
+            <sys_created_on>2026-01-05 20:13:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>6326cc3dc33b1210e83a1275e401313c</sys_id>
+            <sys_id>51dab085935efe1052697d532bba10a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_1153680_invest_0_account_activity</sys_name>
             <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
@@ -188,7 +293,7 @@
             <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
             <sys_update_name>sys_ui_list_x_1153680_invest_0_account_activity_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-02-18 21:30:40</sys_updated_on>
+            <sys_updated_on>2026-01-05 20:13:23</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
