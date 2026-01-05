@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Fees" section_id="04c7bd12c33f5210e83a1275e4013168" sys_domain="global" table="x_1153680_invest_0_account_activity" version="3" view="workspace-investments-management-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fee_account</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-20 19:03:50</sys_created_on>
+            <sys_id>10c7bd12c33f5210e83a1275e4013192</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fees" display_value="Fees" name="x_1153680_invest_0_account_activity" sys_domain="global" view="b7a739124c3f52103494d2debffb545a">04c7bd12c33f5210e83a1275e4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-20 19:03:50</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fee_security</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-20 19:03:50</sys_created_on>
+            <sys_id>10c7bd12c33f5210e83a1275e4013190</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fees" display_value="Fees" name="x_1153680_invest_0_account_activity" sys_domain="global" view="b7a739124c3f52103494d2debffb545a">04c7bd12c33f5210e83a1275e4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-20 19:03:50</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fee_quantity</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-20 19:03:50</sys_created_on>
+            <sys_id>18c7bd12c33f5210e83a1275e4013191</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fees" display_value="Fees" name="x_1153680_invest_0_account_activity" sys_domain="global" view="b7a739124c3f52103494d2debffb545a">04c7bd12c33f5210e83a1275e4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-20 19:03:50</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fee_value_cad</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-20 19:03:50</sys_created_on>
+            <sys_id>18c7bd12c33f5210e83a1275e401318f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fees" display_value="Fees" name="x_1153680_invest_0_account_activity" sys_domain="global" view="b7a739124c3f52103494d2debffb545a">04c7bd12c33f5210e83a1275e4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-20 19:03:50</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fee_cost_cad</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-20 19:03:50</sys_created_on>
+            <sys_id>10c7bd12c33f5210e83a1275e4013191</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fees" display_value="Fees" name="x_1153680_invest_0_account_activity" sys_domain="global" view="b7a739124c3f52103494d2debffb545a">04c7bd12c33f5210e83a1275e4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-20 19:03:50</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-20 19:03:50</sys_created_on>
+            <sys_id>18c7bd12c33f5210e83a1275e4013190</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fees" display_value="Fees" name="x_1153680_invest_0_account_activity" sys_domain="global" view="b7a739124c3f52103494d2debffb545a">04c7bd12c33f5210e83a1275e4013168</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-20 19:03:50</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Fees</caption>
+            <header>false</header>
+            <name>x_1153680_invest_0_account_activity</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-02-20 19:03:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>04c7bd12c33f5210e83a1275e4013168</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1153680_invest_0_account_activity</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+            <sys_update_name>sys_ui_section_04c7bd12c33f5210e83a1275e4013168</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-02-20 19:03:50</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace Investments management 0" name="workspace-investments-management-0">b7a739124c3f52103494d2debffb545a</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

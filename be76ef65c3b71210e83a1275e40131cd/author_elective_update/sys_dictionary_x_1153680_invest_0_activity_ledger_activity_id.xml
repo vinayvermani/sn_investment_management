@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="activity_id" table="x_1153680_invest_0_activity_ledger">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Activity ID</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>activity_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Reference">reference</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <name>x_1153680_invest_0_activity_ledger</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_1153680_invest_0_account_activity">x_1153680_invest_0_account_activity</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 20:58:02</sys_created_on>
+        <sys_id>61be37e1c33b1210e83a1275e401319c</sys_id>
+        <sys_name>Activity ID</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>sys_dictionary_x_1153680_invest_0_activity_ledger_activity_id</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 20:58:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</application>
+        <file_path/>
+        <instance_id>3965b71cdb3af55002d917291396198b</instance_id>
+        <instance_name>dev224621</instance_name>
+        <name>sys_dictionary_x_1153680_invest_0_activity_ledger_activity_id</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="activity_id" table="x_1153680_invest_0_activity_ledger"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>Activity ID</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>activity_id</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="Reference">reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>x_1153680_invest_0_activity_ledger</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference display_value="" name="x_1153680_invest_0_account_activity">x_1153680_invest_0_account_activity</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-18 20:58:02</sys_created_on><sys_id>61be37e1c33b1210e83a1275e401319c</sys_id><sys_name>Activity ID</sys_name><sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package><sys_policy/><sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope><sys_update_name>sys_dictionary_x_1153680_invest_0_activity_ledger_activity_id</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-18 20:58:03</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>324895623</payload_hash>
+        <record_name>Activity Ledger.Activity ID</record_name>
+        <reverted_from/>
+        <source>3e76ef65c3b71210e83a1275e40131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 20:58:03</sys_created_on>
+        <sys_id>b9be77e1c33b1210e83a1275e4013117</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1951ada85a70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 20:58:03</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>71be77e1da3b1210d9873ba8f3c97c17</update_guid>
+        <update_guid_history>71be77e1da3b1210d9873ba8f3c97c17:324895623,f1be37e1303b12102fb4c1120f1a8ef3:-454915180</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-21 02:28:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>0b86d5e535fe481184ced8be1086fad1</sys_id>
+        <sys_metadata>61be37e1c33b1210e83a1275e401319c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Activity ID</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_parent display_value="">2a7d3f61c33b1210e83a1275e4013173</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_scope_delete display_value="">0579e6628a8849e9808480e1020dcfd1</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1153680_invest_0_activity_ledger_activity_id</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1153680_invest_0_activity_ledger_activity_id">b9be77e1c33b1210e83a1275e4013117</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-21 02:28:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="8a2e179ac3f39210e83a1275e40131e5" label="Cost Base  Change" max_length="40" name="x_1153680_invest_0_cost_base_change" type="collection">
+        <element label="Previous Value" max_length="40" name="previous_value" type="string"/>
+        <element label="Activity" max_length="32" name="activity" reference="x_1153680_invest_0_account_activity" type="reference"/>
+        <element label="Note" max_length="100" name="note" type="string"/>
+        <element label="Cost Base Change" max_length="40" name="cost_base_change" type="float"/>
+        <element label="Client" max_length="32" name="client" reference="x_1153680_invest_0_client" type="reference"/>
+        <element label="New Value" max_length="40" name="new_value" type="float"/>
+        <element label="Holding" max_length="32" name="holding" reference="x_1153680_invest_0_client_holdings" type="reference"/>
+        <index name="index">
+            <element name="activity"/>
+        </index>
+        <index name="index2">
+            <element name="client"/>
+        </index>
+        <index name="index3">
+            <element name="holding"/>
+        </index>
+    </element>
+</database>

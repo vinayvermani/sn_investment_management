@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="131837e9c3f71210e83a1275e4013136" label="Account Holdings" max_length="40" name="x_1153680_invest_0_account_holdings" text_index="true" type="collection">
+        <element label="Quantity" max_length="40" name="quantity" type="string"/>
+        <element label="Account" max_length="32" name="account" reference="x_1153680_invest_0_investment_account" type="reference"/>
+        <element display="true" label="Security" max_length="32" name="security" reference="x_1153680_invest_0_investment_securities" type="reference"/>
+        <element label="Cost Base (ACB) CAD" max_length="255" name="cost_base_acb_cad" type="float"/>
+        <index name="index">
+            <element name="account"/>
+        </index>
+        <index name="index2">
+            <element name="security"/>
+        </index>
+    </element>
+</database>

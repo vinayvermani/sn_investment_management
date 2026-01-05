@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="5444ee3fc384e210e83a1275e401310c" sys_domain="global" table="x_1153680_invest_0_test_case" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-10 00:24:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a444ee3fc384e210e83a1275e4013135</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1153680_invest_0_test_case" name="x_1153680_invest_0_test_case" sys_domain="global" view="Default view">5444ee3fc384e210e83a1275e401310c</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_1153680_invest_0_test_case" sys_domain="global" view="Default view">6f32e2bbc384e210e83a1275e4013100</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-10 00:24:51</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-10 00:24:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2444ee3fc384e210e83a1275e4013136</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1153680_invest_0_test_case" name="x_1153680_invest_0_test_case" sys_domain="global" view="Default view">5444ee3fc384e210e83a1275e401310c</sys_ui_form>
+            <sys_ui_section caption="Results" display_value="Results" name="x_1153680_invest_0_test_case" sys_domain="global" view="Default view">5444ee3fc384e210e83a1275e401310b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-10 00:24:51</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1153680_invest_0_test_case</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-10 00:24:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5444ee3fc384e210e83a1275e401310c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1153680_invest_0_test_case</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+            <sys_update_name>sys_ui_form_sections_5444ee3fc384e210e83a1275e401310c</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-10 00:24:51</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

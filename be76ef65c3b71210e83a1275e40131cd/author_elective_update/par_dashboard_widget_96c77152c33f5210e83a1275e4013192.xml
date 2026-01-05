@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">c2c77152c33f5210e83a1275e4013186</canvas>
+        <component display_value="Heading">1f6e0643eca7a637e36bd7833549ec9e</component>
+        <component_props>{"variant":"header-primary","label":"Happening Now","wontWrap":false,"hasNoMargin":false,"level":"1","filterConfigurations":[],"noDebounce":"","contextMenuActions":[]}</component_props>
+        <h>3</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>96c77152c33f5210e83a1275e4013192</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>par_dashboard_widget_96c77152c33f5210e83a1275e4013192</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:58</sys_updated_on>
+        <visualization/>
+        <w>47</w>
+        <widget_props/>
+        <x>0</x>
+        <y>0</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</application>
+        <file_path/>
+        <instance_id>3965b71cdb3af55002d917291396198b</instance_id>
+        <instance_name>dev224621</instance_name>
+        <name>par_dashboard_widget_96c77152c33f5210e83a1275e4013192</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">c2c77152c33f5210e83a1275e4013186</canvas><component display_value="Heading">1f6e0643eca7a637e36bd7833549ec9e</component><component_props>{"variant":"header-primary","label":"Happening Now","wontWrap":false,"hasNoMargin":false,"level":"1","filterConfigurations":[],"noDebounce":"","contextMenuActions":[]}</component_props><h>3</h><name/><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-20 19:03:58</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>96c77152c33f5210e83a1275e4013192</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package><sys_policy/><sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope><sys_update_name>par_dashboard_widget_96c77152c33f5210e83a1275e4013192</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-20 19:03:58</sys_updated_on><visualization/><w>47</w><widget_props/><x>0</x><y>0</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>-1998796132</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>3e76ef65c3b71210e83a1275e40131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:58</sys_created_on>
+        <sys_id>16c77152c33f5210e83a1275e4013194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19524becbbb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:58</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>1ac77152113f5210122e0e39f3806d93</update_guid>
+        <update_guid_history>1ac77152113f5210122e0e39f3806d93:-1998796132</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">1ac77152c33f5210e83a1275e40131c7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:59</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>5ecdc583d9e24162b44c2b9edfd8e7e9</sys_id>
+        <sys_metadata>96c77152c33f5210e83a1275e4013192</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_scope_delete display_value="">0579e6628a8849e9808480e1020dcfd1</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_96c77152c33f5210e83a1275e4013192</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_96c77152c33f5210e83a1275e4013192">16c77152c33f5210e83a1275e4013194</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

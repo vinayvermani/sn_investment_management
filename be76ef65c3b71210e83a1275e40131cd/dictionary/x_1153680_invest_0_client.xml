@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ede62ba5c3b71210e83a1275e40131d4" label="Client" max_length="40" name="x_1153680_invest_0_client" text_index="true" type="collection">
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Details" max_length="250" name="details" type="string"/>
+        <element label="ID" max_length="40" name="id" type="string"/>
+    </element>
+</database>

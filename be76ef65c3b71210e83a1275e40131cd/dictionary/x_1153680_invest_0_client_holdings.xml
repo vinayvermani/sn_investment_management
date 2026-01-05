@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d2fb0d5ec33b5210e83a1275e40131a1" label="Client holdings" max_length="40" name="x_1153680_invest_0_client_holdings" text_index="true" type="collection">
+        <element label="Cost Base CAD" max_length="40" name="cost_base_cad" type="float"/>
+        <element label="Client" max_length="32" name="client" reference="x_1153680_invest_0_client" type="reference"/>
+        <element label="Quantity" max_length="40" name="quantity" type="float"/>
+        <element display="true" label="Security" max_length="32" name="security" reference="x_1153680_invest_0_investment_securities" type="reference"/>
+        <index name="index">
+            <element name="client"/>
+        </index>
+        <index name="index2">
+            <element name="security"/>
+        </index>
+    </element>
+</database>

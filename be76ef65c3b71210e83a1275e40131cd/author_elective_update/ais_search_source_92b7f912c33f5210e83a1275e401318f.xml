@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_source">
+    <ais_search_source action="DELETE">
+        <active>true</active>
+        <condition/>
+        <datasource display_value="">x_1153680_invest_0_activity_ledger</datasource>
+        <has_dynamic_filters>false</has_dynamic_filters>
+        <name>Activity Ledger</name>
+        <sys_class_name>ais_search_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:42</sys_created_on>
+        <sys_id>92b7f912c33f5210e83a1275e401318f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Activity Ledger</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>ais_search_source_92b7f912c33f5210e83a1275e401318f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:42</sys_updated_on>
+    </ais_search_source>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</application>
+        <file_path/>
+        <instance_id>3965b71cdb3af55002d917291396198b</instance_id>
+        <instance_name>dev224621</instance_name>
+        <name>ais_search_source_92b7f912c33f5210e83a1275e401318f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_source"><ais_search_source action="INSERT_OR_UPDATE"><active>true</active><condition/><datasource display_value="">x_1153680_invest_0_activity_ledger</datasource><has_dynamic_filters>false</has_dynamic_filters><name>Activity Ledger</name><sys_class_name>ais_search_source</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-20 19:03:42</sys_created_on><sys_id>92b7f912c33f5210e83a1275e401318f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Activity Ledger</sys_name><sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package><sys_policy/><sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope><sys_update_name>ais_search_source_92b7f912c33f5210e83a1275e401318f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-20 19:03:42</sys_updated_on></ais_search_source></record_update>]]></payload>
+        <payload_hash>-1571925260</payload_hash>
+        <record_name>Activity Ledger</record_name>
+        <reverted_from/>
+        <source>3e76ef65c3b71210e83a1275e40131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:42</sys_created_on>
+        <sys_id>9ab7f912c33f5210e83a1275e4013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19524be8bfd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:42</sys_updated_on>
+        <type>AI Search Search Source</type>
+        <update_guid>9eb7f912b03f52107ca9bcc141863790</update_guid>
+        <update_guid_history>9eb7f912b03f52107ca9bcc141863790:-1571925260</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Activity Ledger">0e69a062c37b9210e83a1275e401312b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-21 08:00:04</sys_created_on>
+        <sys_db_object display_value="" name="ais_search_source">ais_search_source</sys_db_object>
+        <sys_id>4b9c97293e224b41990db3001a3dff61</sys_id>
+        <sys_metadata>92b7f912c33f5210e83a1275e401318f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Activity Ledger</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_scope_delete display_value="">0579e6628a8849e9808480e1020dcfd1</sys_scope_delete>
+        <sys_update_name>ais_search_source_92b7f912c33f5210e83a1275e401318f</sys_update_name>
+        <sys_update_version display_value="ais_search_source_92b7f912c33f5210e83a1275e401318f">9ab7f912c33f5210e83a1275e4013191</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-21 08:00:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

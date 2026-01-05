@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="430e27edc3b71210e83a1275e4013116" label="Investment Securities" max_length="40" name="x_1153680_invest_0_investment_securities" text_index="true" type="collection">
+        <element choice="3" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cash" sequence="0" value="cash"/>
+                <element inactive_on_update="false" label="Futures" sequence="4" value="futures"/>
+                <element inactive_on_update="false" label="Stocks" sequence="1" value="stocks"/>
+                <element inactive_on_update="false" label="Crypto" sequence="2" value="crypto"/>
+                <element inactive_on_update="false" label="Options" sequence="3" value="options"/>
+            </choice>
+        </element>
+        <element display="true" label="Symbol" max_length="40" name="symbol" type="string"/>
+        <element label="Details" max_length="150" name="details" type="string"/>
+        <element choice="1" label="Currency" max_length="40" name="currency" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="CAD" sequence="0" value="cad"/>
+                <element inactive_on_update="false" label="USD" sequence="1" value="usd"/>
+            </choice>
+        </element>
+        <element label="Exchange" max_length="40" name="exchange" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="USA" sequence="0" value="usa"/>
+                <element inactive_on_update="false" label="Canada" sequence="1" value="canada"/>
+            </choice>
+        </element>
+        <element label="Name" max_length="40" name="name" type="string"/>
+    </element>
+</database>

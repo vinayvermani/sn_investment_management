@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1153680_invest_0.IMActivityUtil</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>IMActivityUtil</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var IMActivityUtil = Class.create();
+IMActivityUtil.prototype = {
+    initialize: function() {},
+
+    calculateShortAndSellValues: function(clientid, security, quantity, valueCAD) {
+        let currentPosition = clientid && security ? this.getTotalSecurityQuantity(clientid, security.symbol + "") : 0;
+        let shortQuantity = security.symbol + "" != "CAD" && currentPosition !== undefined && quantity > currentPosition ? currentPosition > 0 ? quantity - currentPosition : quantity : 0;
+        let shortCostCAD = shortQuantity > 0 ? (valueCAD / quantity) * shortQuantity : 0;
+        let sellQuantity = quantity - shortQuantity;
+        let sellCostCAD = sellQuantity > 0 ? this.calculateCostCAD(clientid, security.symbol + "", sellQuantity) : undefined;
+        let sellValueCAD = sellQuantity > 0 ? (valueCAD / quantity) * sellQuantity : 0;
+        let sellGainCAD = sellQuantity ? ((sellValueCAD || 0) - (sellCostCAD || 0)) : 0;
+        return {
+            shortQuantity: shortQuantity,
+            shortCostCAD: shortCostCAD,
+            sellQuantity: sellQuantity,
+            sellCostCAD: sellCostCAD,
+            sellValueCAD: sellValueCAD,
+            sellGainCAD: sellGainCAD
+        };
+    },
+    calculateBuyAndCoverValues: function(clientid, security, quantity, valueCAD) {
+        let currentPosition = clientid && security ? this.getTotalSecurityQuantity(clientid, security.symbol + "") : 0;
+        let coverQuantity = security && quantity && security.symbol + "" != "CAD" && currentPosition < 0 ? Math.min(-(currentPosition), quantity) : 0;
+        let coverCostCAD = coverQuantity > 0 ? this.calculateCostCAD(clientid, security.symbol + "", coverQuantity) : 0;
+        let coverValueCAD = security && quantity && security.symbol + "" != "CAD" && coverQuantity > 0 ? (valueCAD / quantity) * coverQuantity : 0;
+        let coverGainCAD = coverQuantity ? ((coverCostCAD || 0) - (coverValueCAD || 0)) : 0;
+
+        let buyQuantity = security && quantity && security.symbol + "" != "CAD" && coverQuantity > 0 ? quantity - coverQuantity : quantity;
+        let buyValueCAD = security && quantity && security.symbol + "" != "CAD" && buyQuantity > 0 ? (valueCAD / quantity) * buyQuantity : 0;
+
+
+        return {
+            buyQuantity: buyQuantity,
+            buyValueCAD: buyValueCAD,
+            coverQuantity: coverQuantity,
+            coverCostCAD: coverCostCAD,
+            coverValueCAD: coverValueCAD,
+            coverGainCAD: coverGainCAD
+        };
+    },
+    processActivities: function() {
+        var gr = new GlideRecord("x_1153680_invest_0_account_activity");
+        gr.orderBy("number");
+        gr.query();
+        while (gr.next()) {
+            this.processActivtityNew(gr);
+        }
+    },
+    roundToFourDecimals: function(number) {
+        if (typeof number !== 'number') {
+            return NaN; // Handle non-numeric input
+        }
+
+        return Math.round(number * 10000) / 10000;
+    },
+    processActivtityNew: function(activity) {
+
+        var self = this;
+        const type = this.getActivityType(activity);
+        activity.type = type;
+
+        const valueCAD = this.getValueCAD(activity);
+        activity.value_cad = valueCAD;
+
+        const feeValueCAD = this.getFeeValueCAD(activity);
+        if (feeValueCAD) {
+            activity.fee_value_cad = feeValueCAD;
+        }
+        const clientid = activity.sending_account ? activity.sending_account.client : activity.receiving_account ? activity.receiving_account.client : undefined;
+
+        let {
+            sending_account,
+            sent_security,
+            sent_quantity,
+            receiving_account,
+            received_security,
+            received_quantity,
+            fee_account,
+            fee_security,
+            fee_quantity
+        } = activity;
+        sent_quantity = sent_quantity ? parseFloat(sent_quantity + "") : null;
+        received_quantity = received_quantity ? parseFloat(received_quantity + "") : null;
+        fee_quantity = fee_quantity ? parseFloat(fee_quantity + "") : null;
+
+        const isCash = (security) => security && ["CAD", "USD"].includes(security.symbol + "");
+        const isCAD = (security) => security && security.symbol == "CAD";
+        const isNOTCAD = (security) => !isCAD(security);
+        const isSecurity = (security) => security && !isCash(security);
+        const missing = (security) => !security;
+
+        const sentIsCash = isCash(sent_security);
+        const receivedIsCash = isCash(received_security);
+        const feeIsCash = isCash(fee_security);
+
+        // ***********  Sending Sell Gains *********** //
+        var sendingValues = sent_security && sent_quantity && isNOTCAD(sent_security) ? self.calculateShortAndSellValues(clientid, sent_security, sent_quantity, valueCAD) : undefined;
+        shortSentQuantity = sendingValues ? sendingValues.shortQuantity : 0;
+        shortSentCostCAD = sendingValues ? sendingValues.shortCostCAD : 0;
+        sellSentQuantity = sendingValues ? sendingValues.sellQuantity : 0;
+        sellSentCostCAD = sendingValues ? sendingValues.sellCostCAD : 0;
+        sellSentValueCAD = sendingValues ? sendingValues.sellValueCAD : 0;
+
+        gs.info("sendingValues: "+activity.getDisplayValue("sent_security"));
+        gs.info(JSON.stringify(sendingValues));
+
+        const isUSDBuy = type === "bought_securities" && sent_security && sent_quantity && sent_security.symbol === "USD"; //For USD Buy and Sell Fees is not use for USD Gains/loss or USD CostBase
+        let sellFees = sent_security.symbol != "CAD" && sellSentQuantity && feeValueCAD ? isUSDBuy ? 0 : ((sellSentQuantity / sent_quantity) * feeValueCAD) : 0;
+        let shortFees = sent_security.symbol != "CAD" && shortSentQuantity && feeValueCAD ? isUSDBuy ? 0 : ((shortSentQuantity / sent_quantity) * feeValueCAD) : 0;
+
+        let sendingGains = undefined;
+        if (sent_security && sent_security.symbol != "CAD" && type != "transfer") {
+            sendingGains = (sellSentValueCAD || 0) - (sellSentCostCAD || 0);
+            if (sendingGains) {
+                this.updateGains(activity, sending_account, sent_security, -(sellSentCostCAD + sellFees), sellSentValueCAD, sellSentQuantity, activity.getDisplayValue("type") + "; Sold " + sent_security.symbol + "");
+            }
+        }
+
+        // ***********  Fee Sell Gains *********** //
+        var feeValues = fee_security && fee_quantity && fee_security.symbol + "" != "CAD" ? self.calculateShortAndSellValues(clientid, fee_security, fee_quantity, feeValueCAD) : undefined;
+        shortFeeQuantity = feeValues ? feeValues.shortQuantity : 0;
+        shortFeeCostCAD = feeValues ? feeValues.shortCostCAD : 0;
+        sellFeeQuantity = feeValues ? feeValues.sellQuantity : 0;
+        sellFeeCostCAD = feeValues ? feeValues.sellCostCAD : 0;
+        sellFeeValueCAD = feeValues ? feeValues.sellValueCAD : 0;
+
+        gs.info("feeValues");
+        gs.info(JSON.stringify(feeValues));
+
+
+        let feeGains = undefined;
+        if (fee_security && fee_quantity && fee_security.symbol != "CAD" && sellFeeQuantity) {
+            feeGains = (sellFeeValueCAD || 0) - (sellFeeCostCAD || 0);
+            if (feeGains) {
+                this.updateGains(activity, fee_account, fee_security, -sellFeeCostCAD, sellFeeValueCAD, sellFeeQuantity, activity.getDisplayValue("type") + "; Sold " + fee_security.symbol + " - For Fees Payment");
+            }
+        }
+
+        // ***********  Short Convered Sell Gains *********** //
+        var receivingValues = received_security && received_quantity && received_security.symbol + "" != "CAD" ? self.calculateBuyAndCoverValues(clientid, received_security, received_quantity, valueCAD) : undefined;
+        buyQuantity = receivingValues ? receivingValues.buyQuantity : 0;
+        buyValueCAD = receivingValues ? receivingValues.buyValueCAD : 0;
+        coverQuantity = receivingValues ? receivingValues.coverQuantity : 0;
+        coverCostCAD = receivingValues ? receivingValues.coverCostCAD : 0;
+        coverValueCAD = receivingValues ? receivingValues.coverValueCAD : 0;
+        coverGainCAD = receivingValues ? receivingValues.coverGainCAD : 0;
+
+        gs.info("receivingValues");
+        gs.info(JSON.stringify(receivingValues));
+
+        const isUSDSell = type === "sold_securities" && received_security && received_quantity && received_security.symbol === "USD"; //For USD Buy and Sell Fees is not use for USD Gains/loss
+        let coverFees = received_security.symbol != "CAD" && coverQuantity && feeValueCAD ? isUSDSell ? 0 : ((coverQuantity / received_quantity) * feeValueCAD) : 0;
+        let buyFees = received_security.symbol != "CAD" && buyQuantity && feeValueCAD ? isUSDSell ? 0 : ((buyQuantity / received_quantity) * feeValueCAD) : 0;
+
+        let coverGains = undefined;
+        if (received_security && received_quantity && received_security.symbol != "CAD") {
+            coverGains = (coverValueCAD || 0) - (coverCostCAD || 0);
+            if (coverGains) {
+                this.updateGains(activity, receiving_account, received_security, coverCostCAD, -(coverValueCAD + coverFees), coverQuantity, activity.getDisplayValue("type") + "; Covered Short Sale with Purchase");
+                //(coverValueCAD+coverFees)=purchase price, coverCostCAD=sold price
+            }
+        }
+
+        /// ***********  Fee Security Quantity & Cost Base Update *********** //
+        //Update Account Quantity && Cost Base
+        if (fee_security && fee_account && fee_quantity) {
+            //Update Account Quantity
+			if(isCAD(fee_security)){
+				this.updateAccountHoldingQuantity(fee_account, fee_security, -fee_quantity, activity, "Fees/Commission");
+			}else{
+							if(sellFeeQuantity){
+				this.updateAccountHoldingQuantity(fee_account, fee_security, -sellFeeQuantity, activity, "Fees/Commission" + (!feeIsCash ? "; Sold " + fee_security.symbol + " For Fees" : ""));
+			}
+            
+            if (shortFeeQuantity) {
+                this.updateAccountHoldingQuantity(fee_account, fee_security, -shortFeeQuantity, activity, "Fees/Commission" + (!feeIsCash ? "; Shorted " + fee_security.symbol + " For Fees" : ""));
+            }
+			}
+
+            if (fee_security.symbol + "" != "CAD" && type != "transfer") {
+                //Update Sold Cost Base
+                if (sellFeeCostCAD) {
+                    this.updateClientHoldingCostBase(fee_account.client, fee_security, -sellFeeCostCAD, activity, "Fees/Commission" + (!feeIsCash ? "; Sold " + fee_security.symbol + " For Fees" : ""));
+                }
+
+                //Update Short Cost Base
+                if (shortFeeQuantity) {
+                    this.updateClientHoldingCostBase(fee_account.client, fee_security, -shortFeeCostCAD, activity, "Fees/Commission" + (!feeIsCash ? "; Shorted " + fee_security.symbol + " For Fees" : ""));
+                }
+            }
+
+        }
+
+        /// ***********  Sent Security Quantity & Cost Base Update *********** //
+        //Update Account Quantity && Cost Base
+        if (sent_security && sending_account && sent_quantity) {
+            //Update Account Quantity
+            this.updateAccountHoldingQuantity(sending_account, sent_security, -sent_quantity, activity, activity.getDisplayValue("type") + (isCAD(sent_security) ? "" : "; Sold " + sent_security.symbol));
+
+            if (isNOTCAD(sent_security) && type != "transfer") {
+                //Update Sold Cost Base
+                if (sellSentCostCAD) {
+                    this.updateClientHoldingCostBase(sending_account.client, sent_security, -sellSentCostCAD, activity, activity.getDisplayValue("type") + "; Sold " + sent_security.symbol);
+                }
+                //Update Short Cost Base
+                if (shortSentQuantity) {
+                    this.updateClientHoldingCostBase(sending_account.client, sent_security, -shortSentCostCAD, activity, activity.getDisplayValue("type") + "; Shorted " + sent_security.symbol);
+                }
+            }
+
+        }
+
+
+
+        /// ***********  Receiving Security Quantity & Cost Base Update *********** //
+        if (received_security && received_quantity && receiving_account) {
+            let received_note = type;
+            if (isCAD(received_security)) {
+				this.updateAccountHoldingQuantity(receiving_account, received_security, received_quantity, activity, activity.getDisplayValue("type"));
+            } else {
+                if (buyQuantity) {
+                    this.updateAccountHoldingQuantity(receiving_account, received_security, buyQuantity, activity, activity.getDisplayValue("type") + (!receivedIsCash ? "; Bought " + received_security.symbol : ""));
+                }
+                if (coverQuantity) {
+                    this.updateAccountHoldingQuantity(receiving_account, received_security, coverQuantity, activity, activity.getDisplayValue("type") + (!receivedIsCash ? "; Covered " + received_security.symbol : ""));
+                }
+            }
+
+
+            if (isNOTCAD(received_security)) {
+                if (["bought_securities", "exchange", "security_deposit", "currency_conversion", "cash_deposit"].includes(type)) {
+                    //For cover position
+                    if (coverQuantity) {
+                        let coverCostCADFinal = undefined;
+                        if (feeValueCAD) {
+                            let feeValueCADForCover = (coverQuantity / received_quantity) * feeValueCAD;
+                            coverCostCADFinal = parseFloat(feeValueCADForCover) + parseFloat(coverCostCAD);
+
+
+                        } else {
+                            coverCostCADFinal = coverCostCAD;
+                        }
+                        if (coverCostCADFinal) {
+                            this.updateClientHoldingCostBase(receiving_account.client, received_security, coverCostCADFinal, activity, activity.getDisplayValue("type") + (!receivedIsCash ? "; Covered " + received_security.symbol : ""));
+                        }
+
+                    }
+
+                    //For Buy Position
+                    if (buyQuantity) {
+                        let buyCostCADFinal = undefined;
+                        if (feeValueCAD) {
+                            let feeValueCADForBuy = (buyQuantity / received_quantity) * feeValueCAD;
+                            buyCostCADFinal = parseFloat(feeValueCADForBuy) + parseFloat(buyValueCAD);
+
+                        } else {
+                            buyCostCADFinal = buyValueCAD;
+                        }
+                        if (buyCostCADFinal) {
+                            this.updateClientHoldingCostBase(receiving_account.client, received_security, buyCostCADFinal, activity, activity.getDisplayValue("type") + (!receivedIsCash ? "; Bought " + buyQuantity + " " + received_security.symbol : ""));
+                        }
+                    }
+                } else if (type == "transfer" && feeValueCAD) {
+                    let transferFee = feeValueCAD;
+                    if (transferFee) {
+                        this.updateClientHoldingCostBase(receiving_account.client, received_security, transferFee, activity, activity.getDisplayValue("type") + "; Transfer Fees");
+                    }
+                } else if (type == "sold_securities") {
+                    //Received USD in this case. updating cost base of USD
+                    receivedCostCAD = valueCAD;
+                    this.updateClientHoldingCostBase(receiving_account.client, received_security, transferFee, activity, activity.getDisplayValue("type") + "; Sold " + sent_security.symbol + " & Bought " + received_security.symbol);
+                }
+
+            }
+
+        }
+        activity.update();
+    },
+    processActivity: function(activity) {
+
+        const type = this.getActivityType(activity);
+        activity.type = type;
+
+        const valueCAD = this.getValueCAD(activity);
+        activity.value_cad = valueCAD;
+
+        const feeValueCAD = this.getFeeValueCAD(activity);
+        if (feeValueCAD) {
+            activity.fee_value_cad = feeValueCAD;
+        }
+
+
+        const clientid = activity.sending_account ? activity.sending_account.client : activity.receiving_account ? activity.receiving_account.client : undefined;
+        let {
+            sending_account,
+            sent_security,
+            sent_quantity,
+            receiving_account,
+            received_security,
+            received_quantity,
+            fee_account,
+            fee_security,
+            fee_quantity
+        } = activity;
+        sent_quantity = sent_quantity ? parseFloat(sent_quantity + "") : null;
+        received_quantity = received_quantity ? parseFloat(received_quantity + "") : null;
+        fee_quantity = fee_quantity ? parseFloat(fee_quantity + "") : null;
+
+        const sentCostCAD = activity.sent_security && sent_quantity && sent_security.symbol + "" != "CAD" ? this.calculateCostCAD(clientid, sent_security.symbol + "", sent_quantity) : undefined;
+
+        const feeCostCAD = activity.fee_security && fee_quantity && fee_security.symbol + "" != "CAD" ? this.calculateCostCAD(clientid, fee_security.symbol + "", fee_quantity) : undefined;
+
+
+        //Sending Gains
+        let sendingGains = undefined;
+        if (sent_security && sent_security.symbol != "CAD" && type != "transfer") {
+            sendingGains = (valueCAD || 0) - (sentCostCAD || 0);
+            if (sendingGains) {
+                this.updateGains(activity, sending_account, sent_security, (type == "sold_securities" || type == "currency_conversion" ? (sentCostCAD || 0 + feeValueCAD) : (sentCostCAD || 0)), valueCAD, sent_quantity, type);
+            }
+        }
+
+
+        //Fee Gains
+        let feeGains = undefined;
+        if (fee_security && fee_security.symbol != "CAD") {
+            feeGains = (feeValueCAD || 0) - (feeCostCAD || 0);
+            if (feeGains) {
+                this.updateGains(activity, fee_account, fee_security, feeCostCAD, feeValueCAD, fee_quantity, fee_security.symbol + "" == "CAD" ? "Fees" : "Sold For Fees Payment");
+            }
+        }
+
+        //Sent Security Updates
+        //Update Account Quantity && Cost Base
+        if (sent_security && sending_account && sent_quantity) {
+            this.updateAccountHoldingQuantity(sending_account, sent_security, -sent_quantity, activity, type);
+            if (sent_security.symbol + "" != "CAD" && type != "transfer") {
+                this.updateClientHoldingCostBase(sending_account.client, sent_security, -sentCostCAD, activity, type);
+            }
+
+        }
+
+        //Fee Security Updates
+        //Update Account Quantity && Cost Base
+        if (fee_security && fee_account && fee_quantity) {
+            let fee_note = fee_security.symbol + "" == "CAD" ? "Fees" : "Sold For Fees Payment";
+            this.updateAccountHoldingQuantity(fee_account, fee_security, -fee_quantity, activity, fee_note);
+            if (fee_security.symbol + "" != "CAD") {
+                this.updateClientHoldingCostBase(fee_account.client, fee_security, -(feeCostCAD || 0), activity, fee_note);
+            }
+
+        }
+
+        //Received Security Updates
+        if (received_security && received_quantity && receiving_account) {
+            let received_note = type;
+            //quantity update
+            this.updateAccountHoldingQuantity(receiving_account, received_security, received_quantity, activity, type);
+
+            if (received_security.symbol + "" != "CAD") {
+                let receivedCostCAD = undefined;
+                if (["bought_securities", "exchange", "security_deposit", "currency_conversion"].includes(type)) {
+                    if (feeValueCAD) {
+
+                        receivedCostCAD = parseFloat(feeValueCAD) + parseFloat(valueCAD);
+
+
+                    } else {
+                        receivedCostCAD = valueCAD;
+                    }
+                } else if (type == "transfer" && feeValueCAD) {
+                    receivedCostCAD = feeValueCAD;
+                    received_note = "transfer fees";
+                } else if (type == "sold_securities") {
+                    receivedCostCAD = valueCAD;
+                }
+
+                if (receivedCostCAD) {
+                    //cost base update
+
+                    this.updateClientHoldingCostBase(receiving_account.client, received_security, receivedCostCAD, activity, received_note);
+                }
+            }
+
+        }
+        activity.update();
+
+    },
+    updateGains: function(activity, account, security, costCAD, valueCAD, quantity, note) {
+
+        var holdingGr = new GlideRecord("x_1153680_invest_0_account_holdings");
+        holdingGr.addQuery("account", account.sys_id);
+        holdingGr.addQuery("security", security.sys_id);
+        holdingGr.query();
+
+        if (holdingGr.next()) {
+            var gr = new GlideRecord("x_1153680_invest_0_gains");
+            gr.initialize();
+            gr.activity = activity.sys_id;
+            gr.holding = holdingGr.sys_id;
+            gr.proceeds_cad = valueCAD;
+            gr.cost_base_cad = costCAD;
+            gr.gains_cad = parseFloat(valueCAD) + parseFloat(costCAD);
+            gr.quantity = quantity;
+            gr.note = note || "";
+            gr.insert();
+        }
+
+    },
+    updateClientHoldingCostBase: function(client, security, costChange, activity, note) {
+        let client_holding = this.getClientHolding(client.sys_id, security);
+        let previous_value = client_holding.cost_base_cad + 0;
+        let new_value = this.roundToFourDecimals(previous_value + costChange);
+        client_holding.cost_base_cad = new_value;
+        client_holding.update();
+
+        //For Tracking Changes
+        var gr = new GlideRecord("x_1153680_invest_0_cost_base_change");
+        gr.initialize();
+        gr.activity = activity.sys_id;
+        gr.client = client.sys_id;
+        gr.note = note;
+        gr.holding = client_holding.sys_id;
+        gr.previous_value = previous_value;
+        gr.new_value = new_value;
+        gr.cost_base_change = costChange;
+        gr.insert();
+
+
+
+    },
+    updateAccountHoldingQuantity: function(account, security, quantity, activity, note) {
+
+        let account_holding = this.getAccountHolding(account, security);
+        let previous_value = account_holding.quantity ? parseFloat(parseFloat(account_holding.quantity).toFixed(10)) : 0;
+        let new_value = previous_value + quantity;
+        account_holding.quantity = parseFloat(new_value.toFixed(10));
+        account_holding.update();
+
+
+
+        //For Tracking Changes
+        var gr = new GlideRecord("x_1153680_invest_0_holding_quantity_change");
+        gr.initialize();
+        gr.activity = activity.sys_id;
+        gr.account = account.sys_id;
+        gr.note = note;
+        gr.holding = account_holding.sys_id;
+        gr.previous_value = previous_value;
+        gr.new_value = parseFloat(new_value.toFixed(10));
+        gr.quantity_change = quantity;
+        gr.insert();
+
+    },
+
+    getClientHolding: function(clientid, security) {
+        var gr = new GlideRecord("x_1153680_invest_0_client_holdings");
+        gr.addQuery("client", clientid);
+        gr.addQuery("security", security);
+        gr.query();
+        if (gr.next()) {
+            return gr;
+
+        } else {
+            gr.initialize();
+            gr.security = security;
+            gr.client = clientid;
+            gr.cost_base_cad = 0;
+            gr.insert();
+            return gr;
+        }
+
+    },
+    getAccountHolding: function(account, security) {
+        var gr = new GlideRecord("x_1153680_invest_0_account_holdings");
+        gr.addQuery("account", account);
+        gr.addQuery("security", security);
+        gr.query();
+        if (gr.next()) {
+            return gr;
+
+        } else {
+            gr.initialize();
+            gr.account = account;
+            gr.security = security;
+            gr.quantity = 0;
+            gr.insert();
+            return gr;
+        }
+
+    },
+
+    calculateCostCAD: function(clientid, securitySymbol, quantity) {
+        var unitCost = this.getCurrentCostBasePerUnit(clientid, securitySymbol);
+        if (unitCost) {
+            return this.roundToFourDecimals(unitCost * quantity);
+        }
+        return undefined;
+    },
+    getFeeValueCAD: function(activity) {
+        var result = undefined;
+        var self = this;
+        const {
+            fee_security,
+            fee_quantity,
+            received_security,
+            sent_security,
+            fx_rate
+        } = activity;
+        const fee_value_symbol = fee_security.symbol + "";
+        if (fee_security) {
+            if (["CAD", "USD"].includes(fee_security.symbol + "")) {
+
+                result = fee_value_symbol === "CAD" ? parseFloat(fee_quantity + "") : parseFloat(fee_quantity + "") * parseFloat(fx_rate + "");
+
+                return result;
+
+            } else { // Non-cash currency fee. e.g Fees is in BTC or ADA
+                const valueCAD = this.getValueCAD(activity);
+                if (received_security && fee_security === received_security) {
+                    result = (valueCAD / activity.received_quantity) * fee_quantity;
+                } else if (sent_security && fee_security === sent_security) {
+                    result = (valueCAD / activity.sent_quantity) * fee_quantity;
+                }
+            }
+        }
+        return result ? self.roundToFourDecimals(result) : 0;
+    },
+
+    getValueCAD: function(activity) {
+        var result = undefined;
+        let {
+            sent_security,
+            received_security,
+            sent_quantity,
+            received_quantity,
+            fx_rate,
+            value_cad
+        } = activity;
+
+        sent_quantity = sent_quantity ? parseFloat(parseFloat(sent_quantity + "").toFixed(10)) : null;
+        received_quantity = received_quantity ? parseFloat(parseFloat(received_quantity + "").toFixed(10)) : null;
+
+        const getCashValue = (security, quantity) => {
+            if (security && ["CAD", "USD"].includes(security.symbol + "")) {
+                return security.symbol + "" == "CAD" ? quantity : quantity * fx_rate;
+            }
+            return 0;
+        };
+
+        result = getCashValue(sent_security, sent_quantity) || getCashValue(received_security, received_quantity) || value_cad || 0;
+        return result ? result : 0;
+    },
+
+    getTotalSecurityQuantity: function(clientid, securitySymbol) {
+        var gr = new GlideRecord("x_1153680_invest_0_account_holdings");
+        gr.addQuery("account.client", clientid);
+        gr.addQuery("security.symbol", securitySymbol);
+        var quantity = 0;
+        gr.query();
+        while (gr.next()) {
+            quantity = quantity + (parseFloat(gr.quantity + "") || 0);
+        }
+        return quantity;
+    },
+    getActivityType: function(activity) {
+        const {
+            sent_security,
+            received_security
+        } = activity;
+        const sentSecurity = sent_security;
+        const receivedSecurity = received_security;
+        const isCash = (security) => security && ["CAD", "USD"].includes(security.symbol + "");
+        const isSecurity = (security) => security && !isCash(security);
+        const missing = (security) => !security;
+
+        if (isCash(sentSecurity) && isSecurity(receivedSecurity)) {
+            return "bought_securities";
+        } else if (isCash(receivedSecurity) && missing(sentSecurity)) {
+            return "cash_deposit";
+        } else if (isCash(sentSecurity) && missing(receivedSecurity)) {
+            return "cash_withdrawal";
+        } else if (sentSecurity && receivedSecurity && sentSecurity !== receivedSecurity && isCash(sentSecurity) && isCash(receivedSecurity)) {
+            return "currency_conversion";
+        } else if (sentSecurity && receivedSecurity && sentSecurity !== receivedSecurity && isSecurity(sentSecurity) && isSecurity(receivedSecurity)) {
+            return "exchange";
+        } else if (isSecurity(receivedSecurity) && missing(sentSecurity)) {
+            return "security_deposit";
+        } else if (isSecurity(sentSecurity) && missing(receivedSecurity)) {
+            return "security_withdrawal";
+        } else if (isSecurity(sentSecurity) && isCash(receivedSecurity)) {
+            return "sold_securities";
+        } else if (sentSecurity && receivedSecurity && sentSecurity == receivedSecurity) {
+            return "transfer";
+        } else {
+            return undefined; // Or another default value if needed
+        }
+    },
+    getCurrentCostbase: function(clientid, securitySymbol) {
+        const gr = new GlideRecord("x_1153680_invest_0_client_holdings");
+        gr.addQuery("client", clientid);
+        gr.addQuery("security.symbol", securitySymbol);
+        gr.query();
+        if (gr.next()) {
+            return parseFloat(gr.getValue("cost_base_cad"));
+        }
+        return undefined;
+    },
+    getCurrentCostBasePerUnit: function(clientid, securitySymbol) {
+        var securityQuantity = this.getTotalSecurityQuantity(clientid, securitySymbol);
+        var self = this;
+        var currentCostBase = self.getCurrentCostbase(clientid, securitySymbol);
+        if (currentCostBase && securityQuantity) {
+            var costPerUnit = currentCostBase / securityQuantity;
+            return Math.round(costPerUnit * 10000) / 10000; //round to 4 decimal places;
+        }
+
+        return undefined;
+    },
+
+    type: 'IMActivityUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-19 21:01:06</sys_created_on>
+        <sys_id>aea785cec3771210e83a1275e4013187</sys_id>
+        <sys_mod_count>196</sys_mod_count>
+        <sys_name>IMActivityUtil</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>sys_script_include_aea785cec3771210e83a1275e4013187</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-15 04:12:59</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>aea785cec3771210e83a1275e4013187</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-19 21:01:05</sys_created_on>
+        <sys_id>8809898ec3771210e83a1275e4013100</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-19 21:01:05</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

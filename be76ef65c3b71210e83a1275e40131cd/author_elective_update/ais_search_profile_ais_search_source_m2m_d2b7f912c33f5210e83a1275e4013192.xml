@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m">
+    <ais_search_profile_ais_search_source_m2m action="DELETE">
+        <exclude_attachments_in_now_assist_genius_results>false</exclude_attachments_in_now_assist_genius_results>
+        <exclude_in_now_assist_genius_results>false</exclude_in_now_assist_genius_results>
+        <exclude_in_regular_search>false</exclude_in_regular_search>
+        <profile display_value="investments-management Search Profile">3ba73912f33f521033371065769dc662</profile>
+        <search_source display_value="Activity Ledger">92b7f912c33f5210e83a1275e401318f</search_source>
+        <sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:42</sys_created_on>
+        <sys_id>d2b7f912c33f5210e83a1275e4013192</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>investments-management Search Profile.Activity Ledger</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_d2b7f912c33f5210e83a1275e4013192</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:42</sys_updated_on>
+    </ais_search_profile_ais_search_source_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</application>
+        <file_path/>
+        <instance_id>3965b71cdb3af55002d917291396198b</instance_id>
+        <instance_name>dev224621</instance_name>
+        <name>ais_search_profile_ais_search_source_m2m_d2b7f912c33f5210e83a1275e4013192</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m"><ais_search_profile_ais_search_source_m2m action="INSERT_OR_UPDATE"><exclude_attachments_in_now_assist_genius_results>false</exclude_attachments_in_now_assist_genius_results><exclude_in_now_assist_genius_results>false</exclude_in_now_assist_genius_results><exclude_in_regular_search>false</exclude_in_regular_search><profile display_value="investments-management Search Profile">3ba73912f33f521033371065769dc662</profile><search_source display_value="Activity Ledger">92b7f912c33f5210e83a1275e401318f</search_source><sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-20 19:03:42</sys_created_on><sys_id>d2b7f912c33f5210e83a1275e4013192</sys_id><sys_mod_count>0</sys_mod_count><sys_name>investments-management Search Profile.Activity Ledger</sys_name><sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package><sys_policy/><sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope><sys_update_name>ais_search_profile_ais_search_source_m2m_d2b7f912c33f5210e83a1275e4013192</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-20 19:03:42</sys_updated_on></ais_search_profile_ais_search_source_m2m></record_update>]]></payload>
+        <payload_hash>-1779853086</payload_hash>
+        <record_name>investments-management Search Profile.Activity Ledger</record_name>
+        <reverted_from/>
+        <source>3e76ef65c3b71210e83a1275e40131d2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-20 19:03:42</sys_created_on>
+        <sys_id>d6b7f912c33f5210e83a1275e40131a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19524be8c8c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-20 19:03:42</sys_updated_on>
+        <type>AI Search Search Profile Search Source M</type>
+        <update_guid>dab7f9122c3f52102eee3b6ffddcc4a6</update_guid>
+        <update_guid_history>dab7f9122c3f52102eee3b6ffddcc4a6:-1779853086</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="investments-management Search Profile.Activity Ledger">5a69a062c37b9210e83a1275e4013130</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-21 08:00:02</sys_created_on>
+        <sys_db_object display_value="" name="ais_search_profile_ais_search_source_m2m">ais_search_profile_ais_search_source_m2m</sys_db_object>
+        <sys_id>184060340fff41de961373ffedd32bf9</sys_id>
+        <sys_metadata>d2b7f912c33f5210e83a1275e4013192</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>investments-management Search Profile.Activity Ledger</sys_name>
+        <sys_package display_value="Investments management" source="x_1153680_invest_0">be76ef65c3b71210e83a1275e40131cd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Investments management">be76ef65c3b71210e83a1275e40131cd</sys_scope>
+        <sys_scope_delete display_value="">0579e6628a8849e9808480e1020dcfd1</sys_scope_delete>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_d2b7f912c33f5210e83a1275e4013192</sys_update_name>
+        <sys_update_version display_value="ais_search_profile_ais_search_source_m2m_d2b7f912c33f5210e83a1275e4013192">d6b7f912c33f5210e83a1275e40131a7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-21 08:00:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

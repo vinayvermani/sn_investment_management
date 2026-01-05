@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="753131a6c3bf9210e83a1275e4013178" label="Holding Quantity Change" max_length="40" name="x_1153680_invest_0_holding_quantity_change" type="collection">
+        <element label="Activity" max_length="32" name="activity" reference="x_1153680_invest_0_account_activity" type="reference"/>
+        <element label="Holding" max_length="32" name="holding" reference="x_1153680_invest_0_account_holdings" type="reference"/>
+        <element label="New Value" max_length="40" name="new_value" type="float"/>
+        <element label="Note" max_length="100" name="note" type="string"/>
+        <element label="Previous Value" max_length="40" name="previous_value" type="float"/>
+        <element label="Quantity change" max_length="255" name="quantity_change" type="float"/>
+        <element label="Account" max_length="32" name="account" reference="x_1153680_invest_0_investment_account" type="reference"/>
+        <index name="index">
+            <element name="account"/>
+        </index>
+        <index name="index2">
+            <element name="activity"/>
+        </index>
+        <index name="index3">
+            <element name="holding"/>
+        </index>
+    </element>
+</database>
