@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="0b3266bbc384e210e83a1275e4013154" label="Test Case" max_length="40" name="x_1153680_invest_0_test_case" type="collection">
         <element label="Result Cost Base Changes" max_length="5000" name="result_cost_base_changes" read_only="true" type="string"/>
-        <element label="testfield" max_length="40" name="testfield" type="string"/>
         <element label="Result Quantity Changes" max_length="5000" name="result_quantity_changes" read_only="true" type="string"/>
         <element label="Result Client Holdings" max_length="5000" name="result_client_holdings" read_only="true" type="string"/>
         <element label="Activities" max_length="5000" name="activities" type="string"/>
